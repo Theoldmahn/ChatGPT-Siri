@@ -4,6 +4,21 @@
 
 Start the "Shortcut" through Siri to connect to the ChatGPT API, turning Siri into an AI chat assistant. You can speak your question directly to Siri, and Siri will answer you. Now our Siri has finally become intelligent and can talk to us fluently! And all this can be done with just a Shortcut and an API key.
 
+# Preparation
+
+- Ensure that the network can access the domain name https://api.openai.com.
+- Ensure that there is enough balance in the API account: https://platform.openai.com/account/usage.
+- Use Siri to start the shortcut: open Settings-> Siri Answer-> Automatic. Check "Always show what you say to Siri" to see if recognition is accurate. Ensure that Siri's language setting matches the language you are using.
+- For versions 1.2 and above, you need to turn on the "Settings" - Apple ID - iCloud - iCloud Drive function to use the save to TXT file function.
+
+## Other related issues
+
+- How to use the API key safely: https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety.
+- API keys: https://platform.openai.com/account/api-keys.
+- API usage: https://platform.openai.com/account/usage.
+- API prices: https://openai.com/pricing.
+- ChatGPT API FAQ: https://help.openai.com/en/articles/7039783-chatgpt-api-faq.
+
 # Shortcut Download
 
 Click the link below to download shortcuts, support iPhone、iPad、Mac、HomePod、CarPlay.
@@ -30,8 +45,10 @@ New feature: support for automatically saving chat records to the "Notes" app.
 
 Support continuous chatting, exit chatting, start new chatting, customize API key, customize prompt system message, customize hint message.
 
-New feature: automatically save chat data to a txt file, the record includes the sending and receiving time of each conversation, tokens consumption statistics, open the "Files" app, find the path: iCloud Drive/Shortcuts/ChatGPT-log to view the chat files, Supports iCloud sync.
+New feature: automatically save chat data to a txt file, the record includes the sending and receiving time of each conversation, tokens consumption statistics.
 
+> Chat Records path: open the "Files" app, find the path: iCloud Drive/Shortcuts/ChatGPT-log to view the chat files, Supports iCloud sync.
+> 
 > You need to open 'Settings' - Apple ID - iCloud - iCloud Drive function to enable the feature of saving to txt file.
 
 - [简体中文版](https://www.icloud.com/shortcuts/00838176f7f342008d5a921e8450a98d)
@@ -50,6 +67,33 @@ The function is the same as 1.2.1, but with a bug fix for new chat.
 
 - [简体中文版](https://www.icloud.com/shortcuts/e79548cd118e45b6a7ad124c891c4ac0)
 - [English Version](https://www.icloud.com/shortcuts/a0e7e6f919de42ce83ffd2af38f653c7)
+
+### ChatGPT Siri 1.2.3
+
+The function is same as 1.2.2, with the following additions:
+1. Ability to select the model and support GPT-4;
+2. Automatically copy the last response to the clipboard;
+3. Save chat records in different folders by day;
+4. Add back the default system message.
+
+- [简体中文版](https://www.icloud.com/shortcuts/900b456d30cb48e2b8423efd455b6457)
+- [English Version](https://www.icloud.com/shortcuts/4bc189c3ec344121991ab9d3c98b5533)
+
+### ChatGPT Siri 1.2.4
+
+The function is the same as 1.2.3, with a bug fix for potential issues with chats record directories in different language systems.
+
+- [简体中文版](https://www.icloud.com/shortcuts/f0328cf2683b4b7b99c488866d220115)
+- [English Version](https://www.icloud.com/shortcuts/5590188f4e2541fba4da79b425be6db2)
+
+> Currently, GPT-4 requires joining a waitlist. Once you join the waitlist, you will receive a confirmation email. Then, you need to wait for the invitation to use the GPT-4 API, and after you have qualified, you can see the GPT-4 model option for testing in the playground backend. If you do not have GPT-4 qualifications, please choose to use the GPT-3.5-Turbo model. 
+
+- gpt-4 api waitlist: https://openai.com/waitlist/gpt-4-api
+- playground：https://platform.openai.com/playground?mode=chat
+
+<div align="center">
+<img width="500" src="img/playground-gpt-4.jpg" />
+</div>
 
 # API key acquisition
 
@@ -91,27 +135,27 @@ This shortcut supports iPhone, iPad and Mac, supports continuous conversations, 
 
 ## Customize name, icon and hint messages.
 
-- Rename and choose icon | Welcome and continue hints.
+- img1: Rename and choose icon
+- img2: Welcome and continue hints
 
-<div align="center">
-<img width="200" src="img/IMG_rename-icon.png" />
-<img width="200" src="img/IMG_welcome-continue.png" />
-</div>
+| img1 | img2 |
+| :-------------: |:-------------:|
+| <img width="200" src="img/IMG_rename-icon.png" /> | <img width="200" src="img/IMG_welcome-continue.png" /> |
 
----
+Customize hint messages.
 
-- Quit chat command, quit chat hint ｜ new chat command, new chat welcome hint
+- img1: Quit chat command, quit chat hint
+- img2: New chat command, new chat welcome hint
 
-<div align="center">
-<img width="200" src="img/IMG_quit-chat.png" />
-<img width="200" src="img/IMG_new-chat.png" />
-</div>
+| img1 | img2 |
+| :-------------: |:-------------:|
+| <img width="200" src="img/IMG_quit-chat.png" /> | <img width="200" src="img/IMG_new-chat.png" /> |
 
 ## Customize system message
 
 You can also customize system message, which help set the behavior of the assistant. In this "shortcut" system message is one of the default system messages of ChatGPT used:
 
-> You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible. Knowledge cutoff: {knowledge_cutoff} Current date: {current_date}
+> You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible. Knowledge cutoff: Sep 2021.
 
 Modify method, edit the "shortcut", slide down, and find the position as shown in the figure:
 

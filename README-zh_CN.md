@@ -2,6 +2,21 @@
 
 通过 Siri 启动「快捷指令」连接 ChatGPT API，让 Siri 变身 AI 聊天助手。你可以直接和 Siri 说出你的问题，Siri 会回答你。现在我们的 Siri 终于变得智能了，可以和我们对答如流！而这一切只需要一个快捷指令和 API key 就可以做到了。
 
+# 准备工作
+
+- 确保网络能正常访问 https://api.openai.com 域名
+- 确保 API 帐户有足够余额：https://platform.openai.com/account/usage
+- 使用 Siri 启动快捷指令，打开设置-》Siri 回答-〉自动。钩上“始终显示你对Siri说的话”，可以方便查看识别是否精准。确保 Siri 的语言设置和你使用的语言一致。
+- 1.2 及以上版本，需要打开「设置」- Apple ID - iCloud - iCloud 云盘 功能，才能使用保存到 txt 文件功能。
+
+## 其他相关问题
+
+- 如何安全使用API key（英文）：https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
+- API keys: https://platform.openai.com/account/api-keys
+- API 用量: https://platform.openai.com/account/usage
+- API 价格: https://openai.com/pricing
+- ChatGPT API 常见问题: https://help.openai.com/en/articles/7039783-chatgpt-api-faq
+
 # 快捷指令下载
 
 点击下面链接下载快捷指令，支持 iPhone、iPad、Mac、HomePod、CarPlay。
@@ -28,8 +43,10 @@
 
 支持连续聊天，退出聊天，开始新聊天，自定义 API key，自定义 prompt 系统消息，自定义提示语。
 
-新功能：自动保存聊天数据到 txt 文件中，记录包含每次对话的发送和接收时间、tokens 消耗统计，打开「文件」app，找到：iCloud 云盘/Shortcuts/ChatGPT-log 目录即可查看，支持 iCloud 同步。
+新功能：自动保存聊天数据到 txt 文件中，记录包含每次对话的发送和接收时间、tokens 消耗统计。
 
+> 聊天记录保存位置：打开「文件」app，找到：iCloud 云盘/Shortcuts/ChatGPT-log 目录即可查看，支持 iCloud 同步。
+> 
 > 需要打开「设置」- Apple ID - iCloud - iCloud 云盘 功能，才能使用保存到 txt 文件功能。
 
 - [简体中文版](https://www.icloud.com/shortcuts/00838176f7f342008d5a921e8450a98d)
@@ -48,6 +65,33 @@
 
 - [简体中文版](https://www.icloud.com/shortcuts/e79548cd118e45b6a7ad124c891c4ac0)
 - [English Version](https://www.icloud.com/shortcuts/a0e7e6f919de42ce83ffd2af38f653c7)
+
+### 智能聊天 1.2.3
+
+功能和1.2.2相同，增加：
+1. 选择模型功能，支持gpt-4；
+2. 自动复制最后一次回复到剪贴板；
+3. 聊天记录按天分不同文件夹保存；
+4. 添加回默认系统消息。
+
+- [简体中文版](https://www.icloud.com/shortcuts/900b456d30cb48e2b8423efd455b6457)
+- [English Version](https://www.icloud.com/shortcuts/4bc189c3ec344121991ab9d3c98b5533)
+
+### 智能聊天 1.2.4
+
+功能和 1.2.3 相同，修复不同语言系统聊天记录目录可能出现 bug。
+
+- [简体中文版](https://www.icloud.com/shortcuts/f0328cf2683b4b7b99c488866d220115)
+- [English Version](https://www.icloud.com/shortcuts/5590188f4e2541fba4da79b425be6db2)
+
+> gpt-4 目前需要加入waitlist，加入后会收到确认加入waitlist邮件。然后需要等待邀请你使用 gpt-4 api 的确认邮件，拿到资格后，在 playground 后台可以看到，能选择 gpt-4模型进行测试。没有 gpt-4 资格请选择使用 gpt-3.5-turbo 模型。
+
+- gpt-4 api waitlist: https://openai.com/waitlist/gpt-4-api
+- playground：https://platform.openai.com/playground?mode=chat
+
+<div align="center">
+<img width="500" src="img/playground-gpt-4.jpg" />
+</div>
 
 # 常见问题
 
@@ -92,27 +136,29 @@
 
 ## 自定义名字、图标及提示信息
 
-- 修改名字、图标 ｜ 欢迎、继续提示 
+自定义名字和图标
 
-<div align="center">
-<img width="200" src="img/IMG_rename-icon-cn.png" />
-<img width="200" src="img/IMG_welcome-continue-cn.png" />
-</div>
+- img1: 修改名字、图标
+- img2: 修改欢迎、继续提示
 
----
+| img1 | img2 |
+| :-------------: |:-------------:|
+| <img width="200" src="img/IMG_rename-icon-cn.png" /> | <img width="200" src="img/IMG_welcome-continue-cn.png" /> |
 
-- 退出聊天命令、退出提示 ｜ 新聊天命令、新聊天欢迎
+自定义提示语
 
-<div align="center">
-<img width="200" src="img/IMG_quit-chat-cn.png" />
-<img width="200" src="img/IMG_new-chat-cn.png" />
-</div>
+- img1: 修改退出聊天命令、退出提示
+- img2: 修改新聊天命令、新聊天欢迎
+
+| img1 | img2 |
+| :-------------: |:-------------:|
+| <img width="200" src="img/IMG_quit-chat-cn.png" /> | <img width="200" src="img/IMG_new-chat-cn.png" /> |
 
 ## 自定义系统消息
 
 你也可以自定义系统消息，系统消息有助于设置助手的行为。在本「快捷指令」系统消息是使用的 ChatGPT 的默认系统消息之一：
 
-> 你是 ChatGPT，是由 OpenAI 训练的大型语言模型。请尽可能简洁地回答问题。知识截止日期为：2021年9月，当前日期为：Current Date。
+> 你是 ChatGPT，是由 OpenAI 训练的大型语言模型。请尽可能简洁地回答问题。知识截止日期为：2021年9月。
 
 修改方法，编辑「快捷指令」，往下滑，找到如图所示位置：
 
@@ -150,7 +196,7 @@
 ## 微信群交流
 
 <div align="center">
-<img width="240" src="img/wx-group3.jpg" />
+<img width="240" src="img/wx-group5.jpg" />
 </div>
 
 # 请作者喝一杯奶茶🥤
@@ -160,3 +206,7 @@
 </div>
 
 # 👉 [🔋爱发电首页](https://afdian.net/a/YueYangDev)
+
+# 星标历史记录
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Yue-Yang/ChatGPT-Siri&type=Date)](https://star-history.com/#Yue-Yang/ChatGPT-Siri&Date)
